@@ -13,7 +13,7 @@ class ShipmentController extends Controller
         $returnNotes = ReturnNote::with('damagedProduct.product', 'damagedProduct.supplier')
         ->where('status', 'pending')
         ->get();    
-        $shipments = ShipmentRecord::with('returnNote')->get();
+        $shipments = ShipmentRecord::with('returnNote.damagedProduct.product')->get(); 
         return view('shipment.index', compact('returnNotes', 'shipments'));
     }
 
@@ -37,7 +37,7 @@ class ShipmentController extends Controller
         $returnNote->status = 'shipped';
         $returnNote->save();
     
-        return redirect('/shipment')->with('success', 'Product shipped successfully');
+        return redirect('/shipment')->with('success', 'Product shipped successfully and added to stock out report');
     }
 
     public function showReturnNote($id)

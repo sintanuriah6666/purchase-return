@@ -25,11 +25,11 @@
                         <div id="new_product_fields">
                             <div class="form-group">
                                 <label for="new_product_code">New Product Code:</label>
-                                <input type="text" class="form-control" id="new_product_code" name="product_code">
+                                <input type="text" class="form-control" id="new_product_code" placeholder="Enter new product code (e.g., 1006)" name="product_code">
                             </div>
                             <div class="form-group">
                                 <label for="new_name">New Name:</label>
-                                <input type="text" class="form-control" id="new_name" name="name">
+                                <input type="text" class="form-control" id="new_name" placeholder="Enter name product " name="name">
                             </div>
                         </div>
                         <div id="existing_product_fields" style="display:none;">

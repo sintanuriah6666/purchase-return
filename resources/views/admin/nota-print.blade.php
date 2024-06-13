@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Return Note</title>
+    <title>Return Nota</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -35,7 +35,7 @@
 </head>
 <body>
     <div class="header">
-        <h2>Return Note</h2>
+        <h2>Return Nota</h2>
         <p>Date return {{ now()->format('d-m-Y') }}</p>
     </div>
 

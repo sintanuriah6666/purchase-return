@@ -8,10 +8,6 @@
             <a href="{{ route('export', ['format' => 'excel']) }}" class="btn btn-success">
                 <i class="fas fa-file-excel"></i> Download Excel
             </a>
-            <a href="{{ route('export', ['format' => 'pdf']) }}" class="btn btn-danger">
-                <i class="fas fa-file-pdf"></i> Download PDF
-            </a>
-            
         </div>
     </div>
     <div class="row">

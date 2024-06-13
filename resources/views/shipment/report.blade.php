@@ -2,17 +2,17 @@
 
 @section('content')
     <div class="container-fluid">
-        <h1 class="h3 mb-4 text-gray-800">Shipment Report</h1>
+        <h1 class="h3 mb-4 text-gray-800">Stock Out Report</h1>
         <div class="card">
             <div class="card-header">
-                Shipment Records
+               Stock Out Report
             </div>
             <div class="card-body">
                 <table class="table">
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Return Note ID</th>
+                            <th>Return Nota ID</th>
                             <th>Shipment Date</th>
                             <th>Supplier Name</th>
                             <th>Supplier Address</th>

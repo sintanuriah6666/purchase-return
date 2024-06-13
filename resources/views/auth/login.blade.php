@@ -9,11 +9,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>Purchase Return - Dashboard</title>
     <link href="{{ asset('storage/default') }}/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link href="{{ asset('storage/default') }}/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="{{ asset('storage/default/') }}/libs/select2/css/select2.min.css" rel="stylesheet" />
+    
 
 
     <!-- Custom fonts for this template-->
@@ -61,24 +62,22 @@
                         
                                         <div class="form-group">
                                             <label for="email">{{ __('E-Mail Address') }}</label>
-                                            <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                            <input id="email" type="email"  class="form-control" placeholder="Enter your email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                         </div>
                         
                                         <div class="form-group">
                                             <label for="password">{{ __('Password') }}</label>
-                                            <input id="password" type="password" class="form-control" name="password" required autocomplete="current-password">
-                                        </div>
-                        
-                                        <div class="form-group">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                        
-                                                <label class="form-check-label" for="remember">
-                                                    {{ __('Remember Me') }}
-                                                </label>
+                                            <div class="input-group">
+                                                <input type="password" class="form-control pe-5 password-input" onpaste="return false"
+                                                    placeholder="Enter your password" aria-describedby="passwordInput"
+                                                    name="password">
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-outline-primary" type="button" id="togglePassword">
+                                                            <i class="fas fa-fw fa-eye"></i>
+                                                        </button>
+                                                    </div>
                                             </div>
                                         </div>
-                        
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-primary">
                                                 {{ __('Login') }}
@@ -120,6 +119,13 @@
     <script src="{{ asset('storage/default') }}/js/demo/chart-pie-demo.js"></script>
     <script src="{{ asset('storage/default') }}/js/app.js"></script>
     <script src="{{ asset('storage/default/') }}/libs/select2/js/select2.min.js"></script>
+    
+    <script>
+         document.getElementById('togglePassword').addEventListener('click', function() {
+        const input = document.querySelector('input[name="password"]');
+        input.type = input.type === 'password' ? 'text' : 'password';
+    });
+    </script>
 
 
 </body>

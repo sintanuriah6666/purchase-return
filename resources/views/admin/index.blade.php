@@ -32,10 +32,10 @@
                                 @if($damagedProduct->returnNote->status == 'shipped')
                                     <span class="badge badge-success">Shipped</span>
                                 @else
-                                    <a href="{{ route('print.return.note', ['damageID' => $damagedProduct->id]) }}" class="btn btn-success btn-sm">Print Return Note</a>
+                                    <a href="{{ route('print.return.note', ['damageID' => $damagedProduct->id]) }}" class="btn btn-success btn-sm">Print Return Nota</a>
                                 @endif
                             @else
-                                <button class="btn btn-primary btn-sm create-return-note" data-id="{{ $damagedProduct->id }}">Create Return Note</button>
+                                <button class="btn btn-primary btn-sm create-return-note" data-id="{{ $damagedProduct->id }}">Create Return Nota</button>
                             @endif
                         </td>
                                               
@@ -53,12 +53,13 @@
             <form id="returnNoteForm" action="{{ route('return-note.store') }}" method="POST">
                 @csrf
                 <div class="modal-header">
-                    <h5 class="modal-title" id="returnNoteModalLabel">Create Return Note</h5>
+                    <h5 class="modal-title" id="returnNoteModalLabel">Create Return Nota</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
+                    <p class="text-muted">Please fill in all the required data in each tab below:</p>
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" id="product-tab" data-toggle="tab" href="#product" role="tab" aria-controls="product" aria-selected="true">Data Product</a>
@@ -70,7 +71,7 @@
                             <a class="nav-link" id="supplier-tab" data-toggle="tab" href="#supplier" role="tab" aria-controls="supplier" aria-selected="false">Data Supplier</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="pembeli-tab" data-toggle="tab" href="#pembeli" role="tab" aria-controls="pembeli" aria-selected="false">Data Pembeli</a>
+                            <a class="nav-link" id="pembeli-tab" data-toggle="tab" href="#pembeli" role="tab" aria-controls="pembeli" aria-selected="false">Data Buyer</a>
                         </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
@@ -100,7 +101,7 @@
                         <div class="tab-pane fade" id="nota" role="tabpanel" aria-labelledby="nota-tab">
                             <div class="form-group">
                                 <label for="notaNumber">Nota Number</label>
-                                <input type="text" class="form-control" id="notaNumber" name="notaNumber" required>
+                                <input type="text" class="form-control" id="notaNumber" name="notaNumber" placeholder="Enter nota number (e.g., NOTA12345)" required>
                             </div>
                             <div class="form-group">
                                 <label for="purchaseDate">Purchase Date</label>
@@ -124,18 +125,18 @@
                         <div class="tab-pane fade" id="pembeli" role="tabpanel" aria-labelledby="pembeli-tab">
                             <!-- Pembeli Data -->
                             <div class="form-group">
-                                <label for="customerName">Customer Name</label>
-                                <input type="text" class="form-control" id="customerName" name="customerName" required>
+                                <label for="customerName">Buyer Name</label>
+                                <input type="text" class="form-control" id="customerName" name="customerName" placeholder="Enter detail buyer" required>
                             </div>
                             <div class="form-group">
-                                <label for="customerPhoneNumber">Customer Phone Number</label>
-                                <input type="text" class="form-control" id="customerPhoneNumber" name="customerPhoneNumber" required>
+                                <label for="customerPhoneNumber">Buyer Phone Number</label>
+                                <input type="text" class="form-control" id="customerPhoneNumber" name="customerPhoneNumber" placeholder="Enter detail buyer" required>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Create and Print</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </form>

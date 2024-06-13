@@ -4,7 +4,7 @@
     <div class="card-body">
     
     <div class="header">
-        <h2>Return Note</h2>
+        <h2>Return Nota</h2>
         <p>Date return {{ now()->format('d-m-Y') }}</p>
     </div>
 
