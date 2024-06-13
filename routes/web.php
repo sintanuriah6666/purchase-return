@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ShipmentController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\RajaOngkirController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,7 @@ use App\Http\Controllers\AuthController;
 |
 */
 
+Route::get('/city', [RajaOngkirController::class, 'index'])->name('city.index');
 
 
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('auth.login');

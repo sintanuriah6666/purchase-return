@@ -110,6 +110,12 @@
             @endif
         @endif
       
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url('/city') }}">
+                <i class="fas fa-fw fa-city"></i> 
+                <span>City</span>
+            </a>
+        </li>
             <hr class="sidebar-divider d-none d-md-block">
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
